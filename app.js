@@ -8,17 +8,29 @@
   var gems = [
     {
       name: 'Dodecahedron',
-      price: 2.95,
-      description: '. . .',
+      price: 2,
+      description: 'Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Nulla porttitor accumsan tincidunt.',
+      images: [
+        {
+          full: 'images/dodecahedron-full.jpg',
+          thumb: 'images/dodecahedron-thumb.jpg'
+        }
+      ],
       canPurchase: true,
       soldOut: false
     },
     {
       name: 'Pentagonal Gem',
       price: 5.95,
-      description: '. . .',
+      description: 'Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Nulla porttitor accumsan tincidunt.',
+      images: [
+        {
+          full: 'images/pentagonal-full.jpg',
+          thumb: 'images/pentagonal-thumb.jpg'
+        }
+      ],
       canPurchase: true,
       soldOut: false
     }
-    ]
+  ]
 })();
