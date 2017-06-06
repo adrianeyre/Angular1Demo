@@ -1,5 +1,14 @@
 <!DOCTYPE html>
 <html ng-app="store">
+  <style>
+    .ng-invalid.ng-dirty {
+      border-color: #F00;
+    }
+    .ng-valid.ng-dirty {
+      border-color: #78FA89;
+    }
+  </style>
+
   <head>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
   </head>
@@ -43,13 +52,13 @@
                 </blockquote>
               </li>
               <form name="reviewForm" ng-controller="ReviewController as reviewCtrl"
-                                      ng-submit="reviewCtrl.addReview(product)">
+                                      ng-submit="reviewForm.$valid && reviewCtrl.addReview(product)" novalidate>
                 <blockquote>
                   <b>Stars: {{reviewCtrl.review.stars}}</b>
                   {{reviewCtrl.review.body}}
                   <cite>by: {{reviewCtrl.review.author}}</cite>
                 </blockquote>
-                <select ng-model="reviewCtrl.review.stars">
+                <select ng-model="reviewCtrl.review.stars" required>
                   <option value"1">1 star</option>
                   <option value"1">2 stars</option>
                   <option value"1">3 stars</option>
@@ -58,7 +67,8 @@
                 </select>
                 <textarea ng-model="reviewCtrl.review.body"></textarea>
                 <label>by:</label>
-                <input ng-model="reviewCtrl.review.author" type="email" />
+                <input ng-model="reviewCtrl.review.author" type="email" required/>
+                <div> reviewForm is {{reviewForm.$valid}} </div>
                 <input type="submit" value="Submit" />
               </form>
             </div>
