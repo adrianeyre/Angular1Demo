@@ -28,6 +28,13 @@
           thumb: 'images/dodecahedron-thumb.jpg'
         }
       ],
+      reviews: [
+        {
+          stars: 5,
+          body: "Great product",
+          author: "Bob@bob.com"
+        }
+      ],
       canPurchase: true,
       soldOut: false
     },
@@ -39,6 +46,13 @@
         {
           full: 'images/pentagonal-full.jpg',
           thumb: 'images/pentagonal-thumb.jpg'
+        }
+      ],
+      reviews: [
+        {
+          stars: 1,
+          body: "Rubbish",
+          author: "John@bob.com"
         }
       ],
       canPurchase: true,
